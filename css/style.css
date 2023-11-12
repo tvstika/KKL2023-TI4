@@ -1,0 +1,517 @@
+:root {
+    --primary: #d9d9d9;
+    --bg: #f8f8f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Tungsten-Bold";
+    letter-spacing: 1px;
+}
+
+
+/* Navbar Start*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--bg);
+}
+
+.navbar .navbar-logo span {
+    color: rgb(12, 141, 221);
+}
+
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: inline-block;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0 0.9rem;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--bg);
+    background-color: rgb(79, 78, 78);
+}
+
+.navbar .navbar-nav a::after {
+    /* content: ""; */
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: var(--bg);
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--bg);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.navbar .navbar-nav .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar .navbar-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    width: 200%;
+}
+
+.navbar .navbar-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .navbar-nav .dropdown-content a {
+    color: var(--bg);
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.navbar .navbar-nav .dropdown-content a:hover {
+    color: var(--bg);
+    background-color: rgb(79, 78, 78);
+    width: 93%;
+}
+
+
+/* Hero SSection Start */
+
+.hero {
+    position: relative;
+    height: 100vh;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+
+.abtu {
+    position: relative;
+    height: 100vh;
+}
+
+.abtu video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text,
+.abtu h1 {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text,
+.abtu p {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.us-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    font-size: 2rem;
+    padding: 15%;
+}
+
+.us {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.us img {
+    width: 100%;
+}
+
+.us {
+    flex: 1;
+    margin: 0 20px;
+}
+
+
+/* Hero Section End */
+
+
+/* Media Section Start */
+
+.media {
+    padding: 2rem;
+}
+
+.media h2 {
+    font-size: 9rem;
+    position: relative;
+    z-index: 1;
+    margin-left: -3px;
+    /* text-align: center; */
+    margin-bottom: -4rem;
+}
+
+.image-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
+    /* background-color: black; */
+    position: relative;
+}
+
+.image-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.image-card h3 {
+    font-size: 2.5rem;
+    color: black;
+    padding: 1rem;
+}
+
+.image-card p {
+    font-size: 1.7rem;
+    color: black;
+    padding: 1rem;
+}
+
+.toabtus {
+    background-color: rgb(12, 141, 221);
+    color: #fff;
+    margin-top: 9rem;
+    padding: 7rem;
+}
+
+.ctntoabtus {
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 4rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+/* Media Section End */
+
+
+/* Gallery Section Start */
+
+
+/* Swiper styles */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider-image {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.slider-text h1 {
+    font-size: 7rem;
+}
+
+.slider-text h2 {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 2rem;
+}
+
+.gallery h2 {
+    font-size: 9rem;
+    position: relative;
+    z-index: 1;
+    margin-left: 7px;
+    /* text-align: center; */
+    margin-bottom: -4rem;
+    padding-right: 200%;
+}
+
+.gallery-item {
+    position: relative;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    transform: translateY(0);
+}
+
+.gallery-item-overlay h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-item-overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover video {
+    transform: scale(1.1);
+}
+
+
+/* .gallery-item:hover .gallery-item-overlay {
+    transform: translateY(-100);
+} */
+
+.swiper-pagination {
+    position: absolute;
+    /* bottom: 0;
+    left: 0; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    width: 30px;
+    height: 5px;
+    margin: 0 5px;
+    background-color: #333;
+    opacity: 0.5;
+    border-radius: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+/* Gallery Section End */
+
+
+/* Media Queries */
+
+
+/* Laptop */
+
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: black;
+        width: 30rem;
+        height: 100vh;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+    .gallery-item-overlay h3 {
+        margin-top: -1.7rem;
+    }
+    .gallery-item-overlay {
+        transform: translateY(30%);
+        z-index: 2;
+    }
+    .navbar .navbar-nav .dropdown-content {
+        position: relative;
+        padding-left: 5rem;
+    }
+    .us-text {
+        flex-direction: column;
+    }
+    .us,
+    .text {
+        flex: none;
+        margin: 20px 0;
+    }
+}
+
+
+/* Mobile Phone */
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
